@@ -1,0 +1,104 @@
+.tab-bar {
+
+  // fix active tab background color when syntax theme is light
+  .tab.active, .tab.active:before, .tab.active:after {
+    background: lighten(#2d2d2d, 10%)!important;
+  }
+}
+
+.item-views {
+  // stick code view to tab bar (remove 4px space)
+  .editor  {
+    top: -4px;
+  }
+}
+
+.fuzzy-finder {
+  .primary-line {
+    font-size: 10pt;
+  }
+
+  .secondary-line {
+    font-size: 8pt;
+  }
+}
+
+//
+// Nuclide
+//
+
+@hover-bar-height: 24px;
+
+.symbols-view {
+  .primary-line {
+    font-size: 10pt;
+  }
+
+  .secondary-line {
+    font-size: 8pt;
+  }
+}
+
+.nuclide-outline-view {
+  font-size: 8pt;
+
+  .list-nested-item {
+    font-size: 8pt;
+
+    &.selected {
+      .list-item span {
+        color: white;
+      }
+    }
+
+    &:before {
+      height: 18px;
+    }
+  }
+
+  .list-group li:not(.list-nested-item),
+  .list-tree li:not(.list-nested-item),
+  .list-group li.list-nested-item > .list-item,
+  .list-tree li.list-nested-item > .list-item {
+    line-height: 18px;
+  }
+}
+
+.omnisearch-modal {
+  font-size: 10pt;
+  line-height: 20px;
+  padding: 0 5px;
+
+  .list-item .selected {
+
+  }
+}
+
+.nuclide-file-tree {
+  font-size: 9pt;
+
+  .entry {
+    &.selected {
+      &:before {
+        height: @hover-bar-height;
+      }
+    }
+  }
+
+  .list-tree.has-collapsable-children li.list-item {
+    margin-left: 0px;
+  }
+
+}
+
+.nuclide-file-tree-section-caption {
+  .list-item {
+    font-size: 9pt;
+
+    &.selected {
+      &:before {
+        height: @hover-bar-height;
+      }
+    }
+  }
+}
